@@ -22,9 +22,7 @@ Route::get('/project/create', function () {
     return view('project.create');
 });
 Route::get('/project/ideas','ProjectController@show');
-//  function () {
-//     return view('project.ideas');
-// });
+
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });
@@ -35,6 +33,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/welcome', 'ProjectController@create');
+
+Route::get('/project/edit/{id}', 'ProjectController@edit');
+Route::post('/project/update/{id}', 'ProjectController@update');
+Route::get('/project/delete/{id}', 'ProjectController@destroy');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
