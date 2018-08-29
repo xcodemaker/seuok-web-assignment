@@ -12,8 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('loginAndRegister');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
