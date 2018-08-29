@@ -86,7 +86,7 @@
       
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="">About</a>
       </li>
     </ul>
     @guest
@@ -104,6 +104,14 @@
     <!-- @endauth -->
     </ul>
     @else
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id='navbarDropdownMenuLink'>project Ideas</a>
+            <div class="dropdown-menu">
+                <a href="/ideas" class="dropdown-item">Ideas</a>
+                <a href="/project/create" class="dropdown-item">Add Ideas</a>
+            </div>
+    </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
