@@ -19,10 +19,12 @@ Route::get('/about', function () {
 });
 
 Route::get('/project/create', function () {
-    return view('project/create');
+    return view('project.create');
 });
-
-// Route::get('/', function () {
+Route::get('/ideas', function () {
+    return view('project.ideas');
+});
+// Route::get('/welcome', function () {
 //     return view('welcome');
 // });
 
@@ -31,7 +33,7 @@ Route::resource('projects','ProjectController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::post('/idea_post', 'ProjectController@create');
+Route::post('/welcome', 'ProjectController@create');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');

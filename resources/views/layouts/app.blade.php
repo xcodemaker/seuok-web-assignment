@@ -82,11 +82,11 @@
     <ul class="navbar-nav">
       <li class="nav-item ">
       
-        <a class="nav-link" href="{{ route('login') }}">Home</a>
+        <a class="nav-link" href="{{ url('/') }}">Home</a>
       
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">About</a>
+        <a class="nav-link" href="{{ url('/about') }}">About</a>
       </li>
     </ul>
     @guest
@@ -108,7 +108,7 @@
       <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id='navbarDropdownMenuLink'>project Ideas</a>
             <div class="dropdown-menu">
-                <a href="/ideas" class="dropdown-item">Ideas</a>
+                <a href="{{ url('ideas') }}" class="dropdown-item">Ideas</a>
                 <a href="{{ url('project/create') }}" class="dropdown-item">Add Ideas</a>
             </div>
     </ul>

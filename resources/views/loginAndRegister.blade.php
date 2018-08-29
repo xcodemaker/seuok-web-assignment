@@ -67,11 +67,17 @@
 <div class="container">
     
     
-    
+@auth
     <div class="jumbotron text-center">
     <h1 class="display-3">welcome</h1>
     <p class="lead">Jot down ideas for your next  projects</p>
     <a href="{{ url('project/create') }}" class="btn btn-dark btn-lg">Add project Idea</a>
+
+@endauth
+<div class="jumbotron text-center">
+    <h1 class="display-3">welcome</h1>
+    <p class="lead">Jot down ideas for your next  projects</p>
+    <a href="{{ url('login') }}" class="btn btn-dark btn-lg">Add project Idea</a>
 </div>
 </div>
 
