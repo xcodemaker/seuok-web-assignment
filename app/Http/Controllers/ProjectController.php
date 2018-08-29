@@ -73,7 +73,8 @@ $user_id = Auth::user()->id;
     public function show()
     {
         //$project=new project();
-        $project=project::all();
+        $id= Auth::user()->id;
+        $project=project::where('user_id', $id)->get();
         return view("project.ideas")->with(["data"=>$project]);
     }
    // view('project.ideas')
@@ -85,7 +86,8 @@ $user_id = Auth::user()->id;
      */
     public function edit($id)
     {
-        //
+        $project=project::where('id',$id)->first();
+        return view('project.edit')->with(["data1"=>$project]);
     }
 
     /**
@@ -97,7 +99,16 @@ $user_id = Auth::user()->id;
      */
     public function update(Request $request, $id)
     {
-        //
+        $inputs=$request->input();
+        $title=$inputs['title'];
+        $description=$inputs['description'];
+        $project=project::where('id', $id)
+        ->update(['title' => $title,'description' => $description]);
+        $id= Auth::user()->id;
+        $ideas=project::where('user_id', $id)->get();
+        return view("project.ideas")->with(["data"=>$ideas]);
+        // $inputs=$request->input();
+        // dd($inputs);
     }
 
     /**
@@ -108,6 +119,10 @@ $user_id = Auth::user()->id;
      */
     public function destroy($id)
     {
-        //
+        $idea=project::where('id',$id)->delete();
+        $id= Auth::user()->id;
+        $ideas=project::where('user_id', $id)->get();
+        return view("project.ideas")->with(["data"=>$ideas]);
+        
     }
 }
