@@ -21,9 +21,10 @@ Route::get('/about', function () {
 Route::get('/project/create', function () {
     return view('project.create');
 });
-Route::get('/ideas', function () {
-    return view('project.ideas');
-});
+Route::get('/project/ideas','ProjectController@show');
+//  function () {
+//     return view('project.ideas');
+// });
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });

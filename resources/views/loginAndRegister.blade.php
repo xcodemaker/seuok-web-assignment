@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
     <div class="container">
-  <a class="navbar-brand" href="/">Projot</a>
+  <a class="navbar-brand" href="{{ route('home') }}">Projot</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,11 +20,11 @@
     <ul class="navbar-nav">
       <li class="nav-item ">
       
-        <a class="nav-link" href="{{ route('home') }}">Home</a>
+        <a class="nav-link" href="{{ url('/home') }}">Home</a>
       
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('home') }}">About</a>
+        <a class="nav-link" href="{{ url('/about') }}">About</a>
       </li>
     </ul>
     
