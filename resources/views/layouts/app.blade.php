@@ -109,7 +109,7 @@
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id='navbarDropdownMenuLink'>project Ideas</a>
             <div class="dropdown-menu">
                 <a href="/ideas" class="dropdown-item">Ideas</a>
-                <a href="/project/create" class="dropdown-item">Add Ideas</a>
+                <a href="{{ url('project/create') }}" class="dropdown-item">Add Ideas</a>
             </div>
     </ul>
     <ul class="navbar-nav ml-auto">

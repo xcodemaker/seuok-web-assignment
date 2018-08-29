@@ -19,16 +19,19 @@ Route::get('/about', function () {
 });
 
 Route::get('/project/create', function () {
-    return view('about');
+    return view('project/create');
 });
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+Route::resource('projects','ProjectController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::post('/idea_post', 'ProjectController@create');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');

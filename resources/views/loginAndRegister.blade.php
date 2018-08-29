@@ -30,6 +30,25 @@
     
     <ul class="navbar-nav ml-auto">
     @auth
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                            </ul> 
     @else
       <li class="nav-item">
         <a href="{{ route('login') }}" class="nav-link">Login</a>
@@ -52,7 +71,7 @@
     <div class="jumbotron text-center">
     <h1 class="display-3">welcome</h1>
     <p class="lead">Jot down ideas for your next  projects</p>
-    <a href="{{ route('login') }}" class="btn btn-dark btn-lg">Add project Idea</a>
+    <a href="{{ url('project/create') }}" class="btn btn-dark btn-lg">Add project Idea</a>
 </div>
 </div>
 
