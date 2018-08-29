@@ -12,12 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('loginAndRegister');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/project/create', function () {
+    return view('project.create');
+});
+Route::get('/project/ideas','ProjectController@show');
+//  function () {
+//     return view('project.ideas');
+// });
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
+
+Route::resource('projects','ProjectController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/welcome', 'ProjectController@create');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
