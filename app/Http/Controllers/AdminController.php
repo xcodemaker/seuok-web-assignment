@@ -8,12 +8,28 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //
-    public function __construct()
+    private $user;
+
+    public function __construct(User $user)
     {
         $this->middleware('IsAdmin');
+        $this->user = $user;
     }
     public function index(){
-        return "you are an admin";
+        return view('administrator.home');
+    }
+    public function user(){
+        //$id= Auth::user()->id;
+        $users = $this->user->all();
+        // //return view("project.ideas")->with(["data"=>$project]);
+         return view('administrator.user')->with(["users"=>$users]);
+    }
+
+    public function destroy($id){
+        
+        $users = $this->user->where('id',$id)->delete();
+        $users = $this->user->all();
+         return view('administrator.user')->with(["users"=>$users]);
     }
 }
 

@@ -14,6 +14,15 @@
 Route::get('/', function () {
     return view('loginAndRegister');
 });
+
+// Route::get('/admin',['middleware' => 'admin', function () {
+//     return view('administrator.home');
+// }]);
+
+// Route::get('/admin', function () {
+//     return view('administrator.home');
+// })->middleware('admin');
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -47,6 +56,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
+Route::get('/admin/user','AdminController@user')->name('admin');
+Route::get('/admin/user/destroy/{id}','AdminController@destroy')->name('admin');
 // Route::get('admin/profile', function () {
 //     //
 // })->middleware('auth');
