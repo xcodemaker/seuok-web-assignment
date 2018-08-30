@@ -18,7 +18,7 @@ class UsersExport implements FromCollection,WithMapping,WithHeadings
     }
 
 
-    // Mapping the tables in the DB to the visual representation
+    // Adding headlines to the report
     public function headings(): array
     {
         return [
@@ -31,7 +31,7 @@ class UsersExport implements FromCollection,WithMapping,WithHeadings
             
         ];
     }
-
+// Mapping the tables in the DB to the visual representation    
     public function map($user): array
     {
         return [
