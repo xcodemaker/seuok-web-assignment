@@ -26,12 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    public function role(){
-        return $this->belongsTo('App\Role');
-    }
+    // public function role(){
+    //     return $this->belongsTo('App\Role');
+    // }
     public function isAdmin(){
 
-        if($this->role->name=='admin'){
+        if($this->isAdmin==1){
             //dd('admin');
             return true;
         }
