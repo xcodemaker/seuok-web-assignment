@@ -18,14 +18,14 @@ The views changed according to the user logged in and the functionalities depend
 ### Group 2
 
 
-| Student Number  | Name |  Branch Name|
-| ------ | ------ |-----|
-| SE/2014/011 | K.T.A.L. Karunathilake | Lakshan(Reporting)
-| SE/2014/012 | N.Kekayan | Master(commits)
+| Student Number  | Name |  Branch Name| Contribution
+| ------ | ------ |-----|-----
+| SE/2014/011 | K.T.A.L. Karunathilake | Lakshan(Reporting) | Reporting and Readme
+| SE/2014/012 | N.Kekayan | Master(commits) | Social Login
 | SE/2014/013 | C.A.D Kumara | 
-| SE/2014/014 | M.H.R.D.S. Kumara | dhammika
-| SE/2014/016 | H.M.G.M.L. Kumari | madusha
-| SE/2014/018 | W.O. Lankadheera | lankadheera
+| SE/2014/014 | M.H.R.D.S. Kumara | dhammika | User Roles, CRUD Activities, Admin Functionalities 
+| SE/2014/016 | H.M.G.M.L. Kumari | madusha | CRUD activities for developer activites
+| SE/2014/018 | W.O. Lankadheera | lankadheera | Login/Register
 | SE/2014/019 | G.Lidushan |
 
 ## Technologies 
