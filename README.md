@@ -54,11 +54,13 @@ $ cp .env.example .env
 $ php artisan key:generate
 ```
 4.Rename the database connection according to the your database credentials
+
 5.Migrate the data base models using
 ```sh
 $ php artisan migrate
 ```
 6.Social media keys generated should be copied at the end of the env file
+
 7.Create a user account
 >You can register using social media such as Facebook,Twitter,Githum
 >
