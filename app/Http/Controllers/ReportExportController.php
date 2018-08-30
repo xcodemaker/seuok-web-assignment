@@ -13,10 +13,12 @@ use App\Http\Controllers\Controller;
 
 class ReportExportController extends Controller
 {
+    //excel xlsx file is generated and downloaded for users
     function excel_user(){        
         return Excel::download(new UsersExport, 'users.xlsx');
     }
 
+    //excel xlsx file is generated and downloaded for projects
     function excel_projects(){        
         return Excel::download(new ProjectsExport, 'projects.xlsx');
     }

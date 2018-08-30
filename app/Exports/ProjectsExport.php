@@ -17,6 +17,7 @@ class ProjectsExport implements FromCollection,WithMapping,WithHeadings
         return project::all();
     }
 
+    //Project Exports headlines are added to the reports
     public function headings(): array
     {
         return [
@@ -29,7 +30,7 @@ class ProjectsExport implements FromCollection,WithMapping,WithHeadings
             
         ];
     }
-
+    //Project reports data are mapped to visual only wanteed data
     public function map($project): array
     {
         return [
