@@ -5,7 +5,8 @@
     
 <div class="card card-body mb-2">
     <a class="btn btn-dark btn-block mb-2" href="{{ url('/admin/user') }}">User control</a>
-    <a class="btn btn-danger btn-block mb-2" href="">Ideas control</a>
+    <a class="btn  btn-block mb-2" style="background-color:#430064; color:white;" href="{{ url('/admin/ideas') }}">Ideas control</a>
+    <a class="btn  btn-block mb-2" style="background-color:#089000; color:white;" href="{{ url('/admin/ideas') }}">Export data to Excel</a>
    
 </div>
     
