@@ -19,7 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -94,6 +94,7 @@
     <ul class="navbar-nav ml-auto">
     <!-- @auth -->
     <!-- @else -->
+    
    
       <li class="nav-item">
         <a href="{{ route('login') }}" class="nav-link">Login</a>
@@ -113,6 +114,16 @@
                 <a href="{{ url('project/create') }}" class="dropdown-item">Add Ideas</a>
             </div>
     </ul>
+    @if ( auth()->user()->isAdmin() )
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a href="{{ url('/admin') }}" class="nav-link btn btn-danger btn-block">Admin</a>
+        
+      </li>
+      </ul>
+    @else
+
+    @endif
     <ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
