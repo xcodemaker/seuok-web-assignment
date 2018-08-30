@@ -64,6 +64,8 @@ Route::get('/admin/ideas','AdminController@ideas')->name('admin');
 Route::get('/admin/idea/edit/{id}','AdminController@ideaEdit')->name('admin');
 Route::get('/admin/idea/accept/{id}','AdminController@accept')->name('admin');
 Route::get('/admin/idea/decline/{id}','AdminController@decline')->name('admin');
+Route::get('/admin/idea/remove/{id}','AdminController@remove')->name('admin');
+
 // Route::get('admin/profile', function () {
 //     //
 // })->middleware('auth');
