@@ -72,6 +72,13 @@ class AdminController extends Controller
         $project=project::all();
         return view("administrator.ideas")->with(["data"=>$project]);
       }
+
+      public function remove($id){
+        
+        $project=project::where('id', $id)->delete();
+        $project=project::all();
+        return view("administrator.ideas")->with(["data"=>$project]);
+      }
     
 }
 
