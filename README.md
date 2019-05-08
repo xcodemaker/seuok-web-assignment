@@ -62,7 +62,7 @@ $ php artisan migrate
 6.Social media keys generated should be copied at the end of the env file
 
 7.Create a user account
->You can register using social media such as Facebook,Twitter,Githum
+>You can register using social media such as Facebook,Twitter,Github
 >
 >If you need to make the user admin you have to manual change the database table called users and change the isAdmin from '0' to '1' 
 
